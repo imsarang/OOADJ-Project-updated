@@ -15,13 +15,16 @@
             <body>
                 <form:form>
                     <c:forEach var="movie" items="${movieList}">
-                        <h2>${movie.id}</h2>
-                        <h2>${movie.name}</h2>
-                        <h2>${movie.description}</h2>
-                        <h2>${movie.durationMins}</h2>
-                        <h2>${movie.releaseDate}</h2>
-                        <h2>${movie.genre}</h2>
-                        
+                        <a href="./showMovie?id=${movie.id}">
+                            <h2 id="movie_id">${movie.id}</h2>
+                            <h2>${movie.name}</h2>
+                            <h2>${movie.description}</h2>
+                            <h2>${movie.durationMins}</h2>
+                            <h2>${movie.releaseDate}</h2>
+                            <h2>${movie.genre}</h2>
+                            
+                        </a>
+                       
                         <!-- <h2><button type="button" class="btn btn-success">
                                             <a href="/editMovie/${movie.id}" style="color:white;font-size: large;">Edit</a>
                                         </button></h2> -->
@@ -32,6 +35,14 @@
                     </c:forEach>
 
                 </form:form>
+                <button><a href="./addMovie">ADD MOVIE</a></button>
+                <button><a href="./addShow">ADD SHOW(MAX 3)</a></button>
+                <button><a href="./logoutUser">LOGOUT</a></button>
             </body>
-
+            <script>
+                // const handleClick = ()=>{
+                //     document.getElementById("movie_id");
+                //     console.log("hello");
+                // }
+            </script>
             </html>

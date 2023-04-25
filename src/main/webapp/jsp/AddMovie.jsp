@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1 style="text-align:center;padding:2%">ADD MOVIE</h1>
-    <form:form action="/movies" method="post" modelAttribute="movie" enctype="multipart/form-data">
+    <form:form action="/saveMovie" method="post" modelAttribute="movie">
         
         <div class="form-data">
             <label class="form-label" for="name">Name : </label>
